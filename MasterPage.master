@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <title>Student Record System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="nav" id="nav">
+            <ul>
+                <li id="Stu" runat="server">
+			        <a>Students</a>
+			        <div class="nav subnav">
+				        <ul>
+					        <li id="StuD" runat="server">
+					            <a href="/Students/StudentDetails.aspx">Student Details</a>
+					        </li><!--
+					        --><li id="StuR" runat="server">
+					            <a href="/Students/StudentResults.aspx">Student Results</a>
+					        </li><!--
+					        --><li id="StuU" runat="server">
+					            <a href="/Students/UnitAttempts.aspx">Unit Attempts</a>
+					        </li>
+				        </ul>
+			        </div>
+                </li><!--
+                --><li id="Cor" runat="server">
+		            <a>Courses</a>
+			        <div class="nav subnav">
+				        <ul>
+					        <li id="CorD" runat="server">
+					            <a href="/Courses/CourseDetails.aspx">Course Details</a>
+					        </li><!--
+					        --><li id="CorU" runat="server">
+					            <a href="/Courses/UnitDetails.aspx">Unit Details</a>
+					        </li><!--
+					        --><li id="CorS" runat="server">
+					            <a href="/Courses/StaffDetails.aspx">Staff Details</a>
+					        </li>
+				        </ul>
+			        </div>
+                </li><!--
+                --><li id="Int" runat="server">
+			        <a>Internal</a>
+			        <div class="nav subnav">
+				        <ul>
+					        <li id="IntT" runat="server">
+					            <a href="/Internal/CourseTypes.aspx">Course Types</a>
+					        </li><!--
+					        --><li id="IntS" runat="server">
+					            <a href="/Internal/States.aspx">States</a>
+					        </li><!--
+					        --><li id="IntG" runat="server">
+					            <a href="/Internal/Genders.aspx">Genders</a>
+					        </li>
+				        </ul>
+			        </div>
+		        </li>
+            </ul><!--
+	        --><ul class="right">
+                <li id="StuL" runat="server">
+			        <a href="/StudentLogin.aspx">Student Login</a>
+		        </li>
+	        </ul>
+            </div>
+	    <div class="main">
+            <h2>Student Record System<asp:Literal ID="pagetitle" runat="server"></asp:Literal></h2>
+		    <asp:ContentPlaceHolder ID="Main" runat="server">
+
+		    </asp:ContentPlaceHolder>
+	    </div>
+    </form>
+</body>
+</html>

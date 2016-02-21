@@ -1,0 +1,302 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+	height:100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+	z-index: 0;
+	overflow-y: auto;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#form1 {
+	height: 100%;
+}
+
+#loginForm {
+    display: block;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	position: relative;
+    margin: auto;
+    width: 275px;
+    height: 175px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#loginForm .center {
+    width: 100%;
+    display: block;
+    text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	position: relative;
+}
+
+#loginForm table {
+    width: 100%;
+    height: 100%;
+}
+
+#loginForm tbody tbody > tr > td {
+    padding: 5px;
+}
+
+#loginForm tbody tbody > tr:nth-child(2) > td:nth-child(1) {
+    text-align: center;
+}
+
+#nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+	position:relative;
+	z-index: 10;
+}
+
+.active {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.subnav .active {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav ul {
+    width: 50%;
+    display: inline-block;
+    cursor: default;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul.right {
+    width: 50%;
+	text-align: right;
+}
+
+.nav li {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.nav .right li {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.nav li a {
+    display: inline-block;
+    line-height: 30px;
+    height: 100%;
+    padding: 0 10px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav li:hover .subnav {
+    top: 30px;
+	overflow: hidden;
+}
+
+.nav li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+div.subnav {
+    position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 30px;
+    transition: top 0.3s;
+	z-index: -1;
+}
+
+.subnav ul {
+	width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+	display: block;
+	position: relative;
+	min-height: 93%;
+	width: 97%;
+	margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.hidden {
+	visibility: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.records {
+	width: 100%;
+    border-collapse:collapse;
+	margin-top:5px;
+}
+
+.headers {
+	cursor: default;
+    background-color: rgba(0, 0, 0, 0.1);
+	text-align: left;
+}
+
+.records th {
+	padding: 5px;
+    border: none;
+}
+
+.rowcheck {
+	text-align: center;
+}
+
+.rowcheck input {
+	cursor: pointer;
+}
+
+.records tr:nth-child(4n+0) {
+	background-color: rgba(0, 0, 0, 0.075);
+}
+
+.datarow {
+    transition: background-color 0.2s;
+}
+
+.records tr:hover:not(.headers):not(.datasec) {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.emptytablecell {
+	padding: 5px;
+    height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.collapselabel {
+	display: block;
+	padding: 5px;
+    height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.collapserad {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.collapser {
+  display: block;
+  max-height: 0px;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.collapserad[type="radio"]:checked ~ .collapser {
+  max-height: 400px;
+}
+
+.subdata {
+	padding: 5px;
+}
+
+.subdata input {
+	display: inline-block;
+}
+
+.subdata label {
+	display: inline-block;
+	padding: 5px;
+	padding-right: 0px;
+}
+
+.editor {
+	width: 100%;
+}
+
+.editor td:last-child {
+    width: 100%;
+}
+
+.editor td {
+	white-space: nowrap;
+	text-align: left;
+}
+
+.editor input, .editor select {
+	min-width: 175px;
+	width: auto;
+	padding: 1px;
+	margin:5px;
+}
+
+.editor input[type="submit"] {
+	min-width: 0;
+	width: auto;
+}
+
+.rowbuttons, .editor .rowbuttons {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.rowbuttons input {
+	padding: 3px;
+	margin: 3px;
+}
+
+.rowbuttons.left {
+	text-align: left;
+}
+
+.records th.rowbuttons {
+	padding: 0;
+}
+
+.invalid {
+	color: red;
+}
+
+div.subnav, html, #nav > ul, .records tr.selected, .records + .records .headers {
+    background-color: #278;
+}
